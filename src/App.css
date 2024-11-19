@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -13,13 +17,12 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: #f1dede;
+  min-height: 20vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content:space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +38,152 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.navMenu a {
+  text-decoration: none; /* Removes underline */
+  color: inherit;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin: 0;
+  color: #3b3737;
+}
+
+.navMenu a:hover {
+  color: #282c34;
+  background-color:#f1ca4c;
+  border-radius: 10pt;
+  color: black;
+}
+
+.navMenu ul {
+  display: flex;
+  margin-left: 10px; /* Adjust distance between logo and menu */
+  padding: 0;
+}
+
+.navMenu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navMenu li {
+  display: inline;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 15px;
+  padding-bottom: 19px;
+}
+
+.header img{
+  margin: 20px;
+}
+
+
+
+
+.footer {
+  background-color: #3a4742;
+  margin-top: 30px;
+  width: 100%; /* Ensure it takes full width */
+  padding: 0 15px; /* Padding inside the container */
+}
+
+footer ul{
+	list-style: none;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+	padding-bottom: 20px;
+  padding-top: 20px;
+	width: 100%;
+
+}
+
+.footer-col{
+	width: 25%;
+	padding: 0 15px;
+}
+.footer-col {
+  width: 25%; /* Default width for all columns */
+}
+
+.footer-col:last-child {
+  width: 15%; /* Reduce width for the "Follow Us" column */
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    color: #f4e928; /* Text color */
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: black; /* Underline color */
+    height: 2px;
+    width: 50px; /* Width of the underline */
+}
+
+.footer-col ul {
+    padding: 0; /* Remove default padding */
+}
+
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+
+}
+
+.footer-col ul li a{
+  color:white;
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+
+	display: block;
+	transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover{
+color: #fff130;
+padding-left: 8px;
+
+}
+.footer-col .social-links {
+	list-style:none;
+}
+
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin: 0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: white;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color:#f6f62a;
+	background-color: #000000;
 }
