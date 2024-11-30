@@ -1,16 +1,14 @@
-import reservepic from "./restauranfood.jpg"
-import greekSalad from "./greek salad.jpg"
-import bruchetta from "./bruchetta.svg"
-import lemonDes from "./lemon dessert.jpg"
-import deliveryLogo from "./Delivery Logo.svg"
-import testimonial1 from "./testimonial1.png"
-import testimonial2 from "./testimonial2.png"
-import testimonial3 from "./testimonial3.png"
-import testimonial4 from "./testimonial4.png"
-import chef2 from "./Mario and Adrian A.jpg"
-import chef1 from "./Mario and Adrian b.jpg"
-
-
+import reservepic from "../Assets/restauranfood.jpg"
+import greekSalad from "../Assets/greek salad.jpg"
+import bruchetta from "../Assets/bruchetta.svg"
+import lemonDes from "../Assets/lemon dessert.jpg"
+import deliveryLogo from "../Assets/Delivery Logo.svg"
+import testimonial1 from "../Assets/testimonial1.png"
+import testimonial2 from "../Assets/testimonial2.png"
+import testimonial3 from "../Assets/testimonial3.png"
+import testimonial4 from "../Assets/testimonial4.png"
+import chef2 from "../Assets/Mario and Adrian A.jpg"
+import chef1 from "../Assets/Mario and Adrian b.jpg"
 
 function Main (){
     return(
@@ -20,7 +18,7 @@ function Main (){
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-            <button>Reserve a Table</button>
+            <a href="/booking">Reserve a Table</a>
           </div>
           <div className="col-2">
             <img src={reservepic} alt="reserve a table section" />
@@ -33,10 +31,10 @@ function Main (){
             <button>Online Menu</button>
         </div>
 
-        <div class="product-section">
-		    <div class="card">
+        <div className="product-section">
+		    <div className="card">
 			  <img className="cardImage" src={greekSalad} alt="Greek Salad"/>
-                 <div class="title-price">
+                 <div className="title-price">
               <h3 className="cardTitle">Greek Salad</h3>
               <span className="cardPrice">$12.99</span>
                 </div>
@@ -47,9 +45,9 @@ function Main (){
              </div>
 		     </div>
 
-		    <div class="card">
+		    <div className="card">
 			 <img className="cardImage" src={bruchetta} alt="bruchetta" />
-                <div class="title-price">
+                <div className="title-price">
 			 <h3 className="cardTitle">Bruchetta</h3>
              <span className="cardPrice">$5.99</span>
                 </div>
@@ -60,9 +58,9 @@ function Main (){
              </div>
 		    </div>
 
-		    <div class="card">
+		    <div className="card">
 			 <img className="cardImage" src={lemonDes} alt="Lemon Dessert"/>
-                <div class="title-price">
+                <div className="title-price">
              <h3 className="cardTitle">Lemon Dessert</h3>
              <span className="cardPrice">$5.00</span>
                </div>
@@ -78,14 +76,14 @@ function Main (){
       <div className="testimonials">
         <h1>Testimonials</h1>
         <div className="testimonials-cards-container">
-        <div class="testimonials-card">
+        <div className="testimonials-card">
           <div className="test-col1">
           <div className="rating">
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
           </div>
           <img className="testimonial-img" src={testimonial1} alt="testimonial picture1" />
           </div>
@@ -94,14 +92,14 @@ function Main (){
           </div>
           <p>The flavors transported me straight to the Mediterranean. Simply delightful!</p>
         </div>
-        <div class="testimonials-card">
+        <div className="testimonials-card">
          <div className="test-col1">
           <div className="rating">
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
           </div>
           <img className="testimonial-img" src={testimonial2} alt="testimonial picture1" />
           </div>
@@ -111,14 +109,14 @@ function Main (){
           <p>Fresh ingredients, authentic dishes, and a cozy atmosphere. Loved it!</p>
 
         </div>
-        <div class="testimonials-card">
+        <div className="testimonials-card">
         <div className="test-col1">
           <div className="rating">
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star"></span>
           </div>
           <img className="testimonial-img" src={testimonial3} alt="testimonial picture1" />
           </div>
@@ -127,14 +125,14 @@ function Main (){
             </div>
             <p>Little Lemon is a hidden gem. The hummus and falafel are a must-try!</p>
         </div>
-        <div class="testimonials-card">
+        <div className="testimonials-card">
         <div className="test-col1">
         <div className="rating">
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
-           <span class="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
+           <span className="fa fa-star checked"></span>
         </div>
           <img  className="testimonial-img" src={testimonial4} alt="testimonial picture1" />
           </div>

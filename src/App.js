@@ -1,17 +1,22 @@
 import './App.css';
-import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import Home from "./Pages/Home";
+import Booking from "./Pages/BookingPage";
+import NoPage from './Pages/NoPage';
 
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+      <Routes>
+        <Route index element= {<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+      </BrowserRouter>
     </>
   );
 }
