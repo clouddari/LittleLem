@@ -4,6 +4,7 @@ import React from 'react';
 import Home from "./Pages/Home";
 import Booking from "./Pages/BookingPage";
 import NoPage from './Pages/NoPage';
+import BookingConfirmation from './Components/BookingConfirmation';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="*" element={<NoPage />} />
+        <Route path="/booking-confirmation" element={<BookingConfirmation />} />
       </Routes>
       </BrowserRouter>
     </>

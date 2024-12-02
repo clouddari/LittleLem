@@ -6,6 +6,7 @@ import '../App.css';
 
 function Home (){
     return(
+
         <>
         <Header />
         <Main />

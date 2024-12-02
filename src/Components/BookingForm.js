@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import "../App.css";
+import { fetchAPI, submitAPI } from './api';
+import { useNavigate } from 'react-router-dom';
+
 
 const BookTableForm = () => {
-  // Declare state variables
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -17,28 +21,55 @@ const BookTableForm = () => {
     "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"
   ]);
 
-  // Handle form field changes
+  const [bookedTimes, setBookedTimes]=useState([]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const today = new Date();
+  today.setDate(today.getDate()-1);
+  const minDate = today.toISOString().split('T')[0];  // Format as YYYY-MM-DD
+  
+  const handleDateChange = async (e) => {
+    const date = e.target.value;
+    if (new Date(date) < today ) {
+      alert("Date cannot be in the past");
+      return;
+    }
+    setFormData({ ...formData, date });
+
+    const times = await fetchAPI(date);
+    const exampleBookedTimes = ["18:00", "20:00"]; // Replace with actual API data
+    setBookedTimes(exampleBookedTimes);
+
+
+    const filteredTimes = times.filter((time) => !exampleBookedTimes.includes(time));
+    console.log('Filtered Times:', filteredTimes);
+    setAvailableTimes(filteredTimes);
+  };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // Add form submission logic, e.g., API call here
-  };
 
-  // Ensure date is not in the past
-  const handleDateChange = (e) => {
-    const date = e.target.value;
-    if (new Date(date) < new Date()) {
-      alert("Date cannot be in the past");
-    } else {
-      setFormData({ ...formData, date });
-    }
-  };
+    try{
+    const success = await submitAPI(formData);
+    if (success) {
+      alert("Booking successful!");
+
+      // Update booked times (persist to a server or local state)
+      const updatedBookedTimes = [...bookedTimes, { date: formData.date, time: formData.time }];
+      setBookedTimes(updatedBookedTimes); // Update state if local
+      navigate('/booking-confirmation', { state: formData });
+      } else {
+        throw new Error("Booking Failed. Please try again.");
+      }
+  } catch (error){
+    alert(error.message);
+  }
+};
+
 
   return (
     <form className='form' onSubmit={handleSubmit}>
@@ -46,16 +77,30 @@ const BookTableForm = () => {
       <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
       <label>Phone Number:</label>
-      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
+      <input
+      type="tel"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      required
+      pattern='[0-9]{10}0'
+      title="Phone must be 10 digits" />
 
       <label>Email:</label>
       <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
       <label>Date:</label>
-      <input type="date" name="date" value={formData.date} onChange={handleDateChange} required />
+      <input
+        type="date"
+        name="date"
+        value={formData.date}
+        onChange={handleDateChange}
+        required
+        min={minDate} // Apply the min date here
+/>
 
       <label htmlFor="time">Time:</label>
-      <select id="time" name="time" value={formData.time} onChange={handleChange} required>
+      <select id="time" name="time" value={formData.time} onChange={handleChange}  min ={minDate} required>
         <option value="">Select Time</option>
         {availableTimes.map((time) => (
           <option key={time} value={time}>{time}</option>

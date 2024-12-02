@@ -561,6 +561,31 @@ select {
 }
 
 
+.bookingConfirmation{
+  background-color: #2e6757;
+  color: white;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 50px;
+  padding: 50px 10px;
+}
+
+.booking-confirmation-details{
+  background-color: #EDEFEE;
+  margin: 20px 100px;
+  padding: 20px 10px;
+  border-radius: 1rem;
+  color: black;
+}
+
+.booking-conf-columns{
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+  margin: 10px 52px;
+  padding: 0 10px;
+}
+
 
 .noPage{
   font-family: markazi;
