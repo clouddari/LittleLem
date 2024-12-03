@@ -529,14 +529,29 @@ label {
   display: block;
 }
 
-input, select {
+input, select:required {
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Grey by default */
   border-radius: 4px;
   font-size: 14px;
 }
+
+input:required:valid, select:valid {
+  border: 2px solid green; /* Green for valid input */
+}
+
+input.invalid, select.invalid {
+  border: 2px solid red; /* Red for invalid input */
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+}
+
+
 
 .form-button {
   padding: 12px 20px;
@@ -546,6 +561,18 @@ input, select {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc; /* Grey */
+  color: #888; /* Lighter text */
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #ccc; /* Grey */
+  color: #888; /* Lighter text */
+  cursor: not-allowed;
 }
 
 .form-button:hover {
