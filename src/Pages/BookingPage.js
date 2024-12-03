@@ -1,4 +1,4 @@
-import BookingForm from "../Components/BookingForm";
+import BookingForm from "../Components/BookTableForm ";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import "../App.css";

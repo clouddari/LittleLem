@@ -2,9 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import logoS from "../Assets/logo-single.png"
 import "../App.css";
-import { useLocation } from 'react-router-dom';
-
-
+import { useLocation } from 'react-router';
 
  const BookingConfirmation = () => {
     const location = useLocation();

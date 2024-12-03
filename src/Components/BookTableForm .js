@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "../App.css";
 import { fetchAPI, submitAPI } from './api';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router';
 
 const BookTableForm = () => {
 
