@@ -1,4 +1,5 @@
 import companyLogo from "../Assets/Logo.svg";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Header(){
     return(
@@ -7,13 +8,11 @@ function Header(){
             <nav className="navMenu">
             <ul>
                 <li><a href="/home">Home</a></li>
-                <li><a href="#testimonials">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Order Online</a></li>
-                <li><a href="#">Login</a></li>
+                <li><Link to="#about">About</Link></li>
+                <li><a href="/Menu">Menu</a></li>
+                <li><a href="/booking">Reservations</a></li>
+                <li><a href="/LogIn">Login</a></li>
             </ul>
-
             </nav>
         </header>
     )

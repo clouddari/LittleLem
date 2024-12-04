@@ -92,6 +92,7 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
 
   return (
     <form className='form' onSubmit={handleSubmit}>
+      <h2>Personal information</h2>
       <label>Name:</label>
       <input
        type="text"
@@ -102,10 +103,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
        required
 />
        {validation.name === false && <small className="error">Name is required</small>}
-
-
+       <div className='phone-email'>
+        <div className='phone-form'>
       <label>Phone Number:</label>
-
       <input
       type="tel"
       name="phone"
@@ -115,8 +115,8 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
       pattern="[0-9]{10}"
       required/>
       {validation.phone === false && <small className="error">Phone is required. Format: 1234567890</small>}
-
-
+      </div>
+       <div className="email-form">
       <label>Email:</label>
       <input
        type="email"
@@ -126,7 +126,12 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
        className={validation.email === false ? "invalid" : "valid"}
        required />
        {validation.email === false && <small className="error">Please type the correct email</small>}
+       </div>
+       </div>
 
+  <h2>Booking Details</h2>
+  <div className='booking-details-form'>
+  <div className='date-form'>
       <label>Date:</label>
       <input
     type="date"
@@ -137,6 +142,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
     min={minDate}
     required
 />
+</div>
+
+<div className='time-form'>
       <label htmlFor="time">Time:</label>
       <select
       id="time"
@@ -152,7 +160,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
         ))}
       </select>
       {validation.time === false && <small className="error">Please choose available time. </small>}
+      </div>
 
+      <div className='guests-form'>
       <label>Number of Guests:</label>
       <input
       className={validation.guests === false ? "invalid" : "valid"}
@@ -161,8 +171,10 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
        value={formData.guests}
        onChange={handleChange}
        min="1" max="20" required />
-       {validation.guests === false && <small className="error">Allowed amount of guests is from 1 to 20.</small>}
+       {validation.guests === false && <small className="error">From 1 to 20</small>}
+       </div>
 
+       <div className='occasion-form'>
       <label>Occasion:</label>
       <select
       name="occasion"
@@ -175,7 +187,8 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
         <option value="Anniversary">Anniversary</option>
       </select>
       {validation.occasion === false && <small className="error">Choose the occasion.</small>}
-
+      </div>
+      </div>
       <button className="form-button" type="submit" disabled={!isFormValid}>Submit</button>
     </form>
   );

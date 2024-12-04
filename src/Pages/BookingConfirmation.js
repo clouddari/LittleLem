@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import logoS from "../Assets/logo-single.png"
 import "../App.css";
 import { useLocation } from 'react-router';
@@ -14,12 +14,10 @@ import { useLocation } from 'react-router';
             <div className="confirmation-logo">
                 <img src={logoS} alt="lemon logo"/>
             </div>
-            <div className="confirmation-title">
-                <h1>Booking Confirmed!</h1>
-            </div>
+                <h1 className="confirmation-title">Booking Confirmed!</h1>
             <div className="confirmation-text">
                 <h3>We are pleased to inform you that your reservation request has been received and confirmed!</h3>
-                <h3>Thank you!</h3>
+                <h2>Thank you!</h2>
             </div>
 
             <div className="booking-confirmation-details">
