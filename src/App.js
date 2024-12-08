@@ -5,8 +5,8 @@ import Home from "./Pages/Home";
 import Booking from "./Pages/BookingPage";
 import NoPage from './Pages/NoPage';
 import BookingConfirmation from './Pages/BookingConfirmation';
-import LogIn from './Pages/LogIn';
-import Menu from "./Pages/Menu";
+import Login from './Pages/Login/Login';
+import Menu from './Pages/Menu/Menu';
 
 
 /* finish all clickable elements */
@@ -22,11 +22,11 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route index element= {<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="*" element={<NoPage />} />
         <Route path="/booking-confirmation" element={<BookingConfirmation />} />
-        <Route path="/LogIn" element={<LogIn/>} />
+        <Route path="/Login" element={<Login/>} />
         <Route path="/Menu" element={<Menu />} />
       </Routes>
       </BrowserRouter>

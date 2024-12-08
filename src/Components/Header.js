@@ -8,7 +8,7 @@ function Header(){
             <nav className="navMenu">
             <ul>
                 <li><a href="/home">Home</a></li>
-                <li><Link to="#about">About</Link></li>
+                <li><Link to="/#about-us">About</Link></li>
                 <li><a href="/Menu">Menu</a></li>
                 <li><a href="/booking">Reservations</a></li>
                 <li><a href="/LogIn">Login</a></li>

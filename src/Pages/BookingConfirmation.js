@@ -1,16 +1,20 @@
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import logoS from "../Assets/logo-single.png"
+import logoS from "../Assets/logo-single.png";
 import "../App.css";
 import { useLocation } from 'react-router';
 
  const BookingConfirmation = () => {
     const location = useLocation();
     const bookingDetails = location.state;
+if (!bookingDetails){
+    return<p>loading...</p>
+}
+
     return(
         <>
         <Header />
-        <div className="bookingConfirmation">
+        <div className="b-confirmation">
             <div className="confirmation-logo">
                 <img src={logoS} alt="lemon logo"/>
             </div>
@@ -46,8 +50,5 @@ import { useLocation } from 'react-router';
         </>
         );
         };
-
-
-
 
 export default BookingConfirmation;

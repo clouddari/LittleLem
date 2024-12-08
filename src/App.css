@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+html {
+  scroll-behavior: smooth;
+}
 
 /* header */
 .logo {
@@ -154,6 +157,8 @@
   border-style: none;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
 }
 .logobutton button:hover{
   background-color: #ee9972;
@@ -397,6 +402,7 @@ margin: 5px 0;
   margin-bottom: 30px;
   position: relative;
   color: #f4e928; /* Text color */
+  transition: background-color 0.3s, color 0.3s;
 }
 .footer-col h4::before {
   content: '';
@@ -456,11 +462,11 @@ padding: 4px;
 
 /* Booking Form */
 form {
-  font-family: karla;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   max-width: 600px;
-  margin: 50 auto;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 20px 50px;
   background-color: #FECCCC;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -480,6 +486,10 @@ input, select:required {
   border-radius: 15px;
   font-size: 14px;
 }
+.input-name{
+  width:98%;
+}
+
 input:required:valid, select:valid {
   border: 2px solid green; /* Green for valid input */
 }
@@ -513,6 +523,7 @@ input.invalid, select.invalid {
   font-weight: 900;
   display: block;
   margin: 15px auto;
+  transition: background-color 0.3s, color 0.3s;
 }
 button:disabled {
   background-color: #ccc; /* Grey */
@@ -531,7 +542,7 @@ button:disabled:hover {
   justify-content: space-around;
 }
 .phone-email input{
- width: 285px;
+ width: 270px;
 }
 .phone-form, .email-form{
   padding:0;
@@ -539,10 +550,10 @@ button:disabled:hover {
 .booking-details-form{
 display: flex;
 flex-wrap: wrap;
-gap: 25px;
+gap: 40px;
 }
 .booking-details-form div {
-    flex: 1 1 calc(50% - 16px); /* Two columns, accounting for the gap */
+    flex: 1 1 calc(50% - 40px); /* Two columns, accounting for the gap */
 }
 .form-button:hover {
   background-color:#ee9972;
@@ -556,7 +567,7 @@ form label{
 }
 
 /* Booking Confirmation */
-.bookingConfirmation{
+.b-confirmation{
   background-color: #495E57;
   color: white;
   border-radius: 1rem;

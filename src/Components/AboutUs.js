@@ -4,7 +4,7 @@ import chef1 from "../Assets/Mario and Adrian b.jpg"
 function AboutUs (){
 
     return(
-        <section id="about">
+        <section id="about-us">
     <div className="AboutUsMain">
        <div className="about-col-1">
             <h1>Little Lemon</h1>

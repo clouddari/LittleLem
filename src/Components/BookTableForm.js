@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router';
 
 
 const BookTableForm = () => {
-
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
@@ -21,6 +20,7 @@ const BookTableForm = () => {
     name: true,
     phone: true,
     email: true,
+    time: true,
     date: true,
   });
 
@@ -46,20 +46,20 @@ const BookTableForm = () => {
   };
   const handleDateChange = async (e) => {
     const date = e.target.value;
-    if (new Date(date) < today ) {
+    if (new Date(date) < today) {
       return;
     }
     setFormData({ ...formData, date });
+    try {
+      const times = await fetchAPI(date);
+      setBookedTimes(times);
+      setAvailableTimes(times);  // Update available times based on the response
+    } catch (error) {
+      console.error("Error fetching available times:", error);
+      setAvailableTimes([]);  // Optionally clear available times on error
+    }
+};
 
-    const times = await fetchAPI(date);
-    const exampleBookedTimes = ["18:00", "20:00"]; // Replace with actual API data
-    setBookedTimes(exampleBookedTimes);
-
-
-    const filteredTimes = times.filter((time) => !exampleBookedTimes.includes(time));
-    console.log('Filtered Times:', filteredTimes);
-    setAvailableTimes(filteredTimes);
-  };
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -83,16 +83,19 @@ const validateField = (name, value) => {
   if (name === "phone") return /[0-9]{10}/.test(value);
   if (name === "email") return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   if (name === "name") return value.trim().length > 0; // Basic non-empty validation
-  if (name === "date") return new Date(value);
+  if (name === "date") return !isNaN(new Date(value).getTime());
   if (name === "guests") return value >= 1 && value <= 20; // Validate guest count
   return true; // For other fields
 };
 
-const isFormValid = Object.values(validation).every(isValid => isValid) && Object.values(formData).every(value => value.trim() !== '');
+const isFormValid = Object.values(validation).every(isValid => isValid) &&
+                    Object.values(formData).every(value => value.trim() !== '') &&
+                    formData.time && formData.guests >= 1 && formData.guests <= 20;
 
   return (
     <form className='form' onSubmit={handleSubmit}>
       <h2>Personal information</h2>
+      <div className='input-name'>
       <label>Name:</label>
       <input
        type="text"
@@ -101,7 +104,7 @@ const isFormValid = Object.values(validation).every(isValid => isValid) && Objec
        onChange={handleChange}
        className={validation.name === false ? "invalid" : "valid"}
        required
-/>
+/> </div>
        {validation.name === false && <small className="error">Name is required</small>}
        <div className='phone-email'>
         <div className='phone-form'>
