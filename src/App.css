@@ -4,13 +4,17 @@
 html {
   scroll-behavior: smooth;
 }
+.App{
+  height: 100%;
+  width: 100%;
+}
 
 .scroll-button {
   border: none; /* Removes the default border */
   box-shadow: none; /* Removes the box-shadow */
   position: fixed;
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
+  bottom: 50px; /* Distance from the bottom */
+  right: 50px; /* Distance from the right */
   background-color: #f1ca4c;
   color: #333;
   display: flex;
@@ -29,55 +33,6 @@ html {
   opacity: 0;
 }
 
-
-/* header */
-.logo {
-  max-height: 4rem;
-  pointer-events: none;
-  margin-right: 60px;
-}
-
-.header {
-  min-height: 6vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(4px + 2vmin);
-  color: white;
-}
-.navMenu a {
-  text-decoration: none; /* Removes underline */
-  color: inherit;
-  padding: 15px 25px;
-  border-radius: 10px;
-  margin: 2px;
-  color: #3b3737;
-  transition: all 0.3s;
-}
-.navMenu a:hover {
-  background-color:#f1ca4c;
-  color: black;
-}
-.navMenu ul {
-  display: flex;
-  padding: 0;
-  padding-left: 10px;
-}
-.navMenu{
-    font-family: 'Karla', sans-serif;
-    font-weight: 500;
-    list-style-type: none;
-    margin-left: 30px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navMenu li, Link {
-  display: inline;
-  padding: 8px 0px;
-  margin: 0 5px;
-}
 /* Reserve a Table Section */
 .reserveSection {
   display: flex;
