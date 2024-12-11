@@ -1,3 +1,4 @@
+import "./Testimonials.css";
 import testimonial1 from "../Assets/testimonial1.png"
 import testimonial2 from "../Assets/testimonial2.png"
 import testimonial3 from "../Assets/testimonial3.png"

@@ -1,0 +1,193 @@
+/* Specials-Menu Section */
+.product-section{
+    display: flex;
+    justify-content:center;
+    gap: 34px;
+    flex-wrap: wrap;
+}
+
+.card {
+  width: 265px;
+  background-color: #EDEFEE;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:auto;
+}
+.cardImage {
+  width: 265px; /* Full width of the card */
+  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+  height: 185px; /* Maintain aspect ratio */
+  margin: 0;
+  padding: 0;
+  object-fit: cover; /* Crops the image to fill the container */
+  object-position: center; /* Adjust the focus point (center by default) */
+}
+.cardTitle {
+  font-family: 'Markazi Text', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.cardPrice {
+  font-size: 1.2rem;
+  color: #ee9972;
+  font-family: 'Karla', sans-serif;
+  font-weight: bolder;
+}
+.title-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.cardDescription {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  color: #495E57;
+  width: 217px;
+  height:120px;
+  font-size: 1rem;
+  margin: 10px 20px;
+}
+.card-button {
+  font-family: 'Karla', sans-serif;
+  font-weight: bolder;
+  margin-top: auto;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.button-logo:hover {
+  background-color: #F4CE14;
+  color: #000;
+  border-radius: 5px;
+}
+.button-logo{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.logobutton{
+    display:flex;
+    margin-top: 60px;
+    width: 80%;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logobutton a{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+    font-weight: bolder;
+    background-color: #f1ca4c;
+    color: #000000;
+    border-radius: 0.5em;
+    width: 200px;
+    height:70px;
+    border-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .logobutton a:hover{
+    background-color: #000;
+    color:#ffffff;
+  }
+  .logobutton h1{
+    font-family: 'Markazi Text', serif;
+    font-weight: 300;
+    color: #000000;
+    font-size: 4.5rem;
+   justify-content: center;
+   margin-left: 300px;
+  }
+
+  @media screen and (max-width: 1024px){
+    .logobutton{
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 60px 40px 60px;
+    }
+    .logobutton h1{
+        margin:0 40px;
+    }
+
+    .logobutton a{
+        margin-right: -50px;
+    }
+
+  }
+
+@media screen and (max-width: 900px){
+   .logobutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+   }
+
+.logobutton a {
+    width: 80%;
+    font-size: 1.2rem;
+    height: auto;
+    padding: 20px 0;
+    margin: 0 auto 35px auto;
+
+}
+.logobutton h1{
+    margin: 20px 0;
+    font-size: 3rem;
+}
+
+.cardDescription{
+    display: none;
+}
+.card{
+    border-radius: 10px;
+    width: 80%
+}
+.card .cardImage{
+    width: 100%;
+}
+.cardTitle{
+    font-size: 2.5rem;
+}
+.cardPrice{
+    font-size: 2rem;
+}
+.button-logo a{
+    font-size: 1.5rem;
+}
+}
+
+@media screen and (max-width: 600px){
+    .logobutton a {
+        width: 80%;
+        height: auto;
+        padding: 15px 0px;
+    }
+
+    .cardTitle{
+        font-size: 2rem;
+    }
+    .cardPrice{
+        font-size: 1.5rem;
+    }
+    .button-logo a{
+        font-size: 1.3rem;
+    }
+}

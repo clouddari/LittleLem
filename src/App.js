@@ -9,12 +9,6 @@ import Login from './Pages/Login/Login';
 import Menu from './Pages/Menu/Menu';
 
 
-/* finish all clickable elements */
-/*link all  buttons to sth - make it logical*/
-//finish styling
-//accessibility
-//responsive design
-//double check for best prectices
 
 function App() {
   return (

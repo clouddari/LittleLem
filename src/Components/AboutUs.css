@@ -1,0 +1,174 @@
+/* About us Section */
+.AboutUsMain{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+  .about-col-1{
+    margin-left: auto;
+  }
+  .about-col-2{
+    margin-right: 190px;
+    padding-left: 100px;
+  }
+  .about-col-1 h1{
+    font-family: 'Markazi Text', serif;
+    font-weight: 500;
+    color: #495E57;
+    font-size: 4.2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 0;
+  }
+  .about-col-1 h2{
+    font-family: 'Markazi Text', serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 2rem;
+  }
+  .about-col-1 p{
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    color: #495E57;
+    width: 370px;
+    font-size:large;
+    text-align: justify;
+  }
+  .about-col-2 img{
+    height: 300px;
+    width: 250px;
+    object-fit: cover;
+    object-position: 100% 85%;
+  }
+  .about-col-2 .chef1 {
+    position: relative;
+    z-index: 2;
+    top: 80px;
+    border-radius: 5%;
+  }
+  .about-col-2 .chef2 {
+    position: relative;
+    z-index: 2;
+    right: 90px;
+    bottom: 90px;
+    border-radius: 5%;
+  }
+
+@media  screen and (max-width: 1024px){
+
+    .AboutUsMain .about-col-1{
+        margin-left: 160px;
+    }
+    .AboutUsMain{
+        padding: 40px 0 0 0;
+    }
+
+    .about-col-1 p{
+        font-size: 1.5rem;
+    }
+   
+        .about-col-2 {
+          margin-top: 65px;
+          display: flex;
+          flex-direction: column; /* Stacks items vertically */
+          align-items: center; /* Centers the content horizontally */
+          gap: 20px; /* Adds spacing between images */
+        }
+      
+        .about-col-2 img {
+          position: static; /* Resets position to avoid overlaps */
+          z-index: auto; /* Removes stacking context */
+          height: auto; /* Makes height responsive */
+          max-width: 200%; /* Ensures images scale within the container */
+          border-radius: 5%; /* Keeps rounded corners */
+        }
+      
+        .about-col-2 .chef1,
+        .about-col-2 .chef2 {
+          position: static; /* Disables manual positioning */
+        }
+      
+}
+
+@media screen and (max-width: 900px) {
+    .AboutUsMain {
+      flex-direction: column; /* Stack the columns vertically */
+      align-items: center; /* Center content horizontally */
+      padding: 40px 20px; /* Adjust padding for smaller screens */
+
+    }
+  
+    .AboutUsMain .about-col-1{
+        margin:0;
+        max-width: 75%;
+    }
+
+    .about-col-2 {
+      margin:0; /* Reset margins */
+      padding: 10px 30px; /* Add vertical spacing between sections */
+      text-align: center; /* Center-align text for better readability */
+    }
+  
+    .about-col-1 p {
+      width: auto; /* Allow text to take full width */
+      font-size: 1.5rem;
+    }
+    .about-col-1 h1 {
+        font-size: 3.3rem;
+      }
+  
+    .about-col-2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 45px;
+    }
+  
+    .about-col-2 img {
+      max-width: 300%;
+     height: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    .about-col-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+      }
+    
+      .AboutUsMain .about-col-2 img {
+      max-width:450px;
+      width: 360px;
+      border-radius: 15px;
+      }
+
+    
+
+  }
+
+  @media  screen and (max-width: 400px){
+    .about-col-1 p {
+        font-size: 1.1rem;
+        width: auto;
+      }
+      .about-col-1 h1 {
+          font-size: 3rem;
+        }
+
+    .about-col-1 h2{
+        font-size: 1.8rem;
+        margin: 10px 0 0 0;
+    }
+
+    .AboutUsMain .about-col-2 img {
+        max-width:300px;
+        width: 250px;
+        height: 80%;
+        border-radius: 15px;
+        }
+
+  }

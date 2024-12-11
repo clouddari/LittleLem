@@ -2,8 +2,33 @@ import greekSalad from "../Assets/greek salad.jpg"
 import bruchetta from "../Assets/bruchetta.svg"
 import lemonDes from "../Assets/lemon dessert.jpg"
 import deliveryLogo from "../Assets/Delivery Logo.svg"
+import "./Specials.css"
 
 function Specials (){
+  const SpeacialCards = [
+    { id: 11,
+       title: "Greek Salad",
+      price: "$12.99",
+      pic:greekSalad,
+      alt: "Greek Salad",
+      description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+    },
+    { id: 22,
+      title: "Bruchetta",
+      price: "$5.99",
+      pic:bruchetta,
+      alt: "bruchetta",
+      description:"Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
+    },
+    { id: 33,
+      title: "Lemon Dessert",
+      price: "$5",
+      pic:lemonDes,
+      alt: "Lemon Dessert",
+      description:"This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
+     },
+  ];
+
     return(
         <>
          <div className="specials">
@@ -13,48 +38,25 @@ function Specials (){
         </div>
 
         <div className="product-section">
-		    <div className="card">
-			  <img className="cardImage" src={greekSalad} alt="Greek Salad"/>
-                 <div className="title-price">
-              <h3 className="cardTitle">Greek Salad</h3>
-              <span className="cardPrice">$12.99</span>
-                </div>
-			  <p className="cardDescription">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-              <div className="button-logo">
-             <a href="#" className="card-button">Order a delivery</a>
-             <img src={deliveryLogo} alt="delivery logo"/>
-             </div>
-		     </div>
+        {SpeacialCards.map((card) =>(
+		       <div key={card.id} className="card">
+             <img className="cardImage" src={card.pic} alt={card.alt}></img>
+          <div className="title-price">
+            <h3 className="cardTitle">{card.title}</h3>
+            <span className="cardPrice">{card.price}</span>
+         </div>
 
-		    <div className="card">
-			 <img className="cardImage" src={bruchetta} alt="bruchetta" />
-                <div className="title-price">
-			 <h3 className="cardTitle">Bruchetta</h3>
-             <span className="cardPrice">$5.99</span>
-                </div>
-			 <p className="cardDescription">Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
+         <p className="cardDescription">{card.description}</p>
              <div className="button-logo">
              <a href="#" className="card-button">Order a delivery</a>
              <img src={deliveryLogo} alt="delivery logo"/>
              </div>
-		    </div>
-
-		    <div className="card">
-			 <img className="cardImage" src={lemonDes} alt="Lemon Dessert"/>
-                <div className="title-price">
-             <h3 className="cardTitle">Lemon Dessert</h3>
-             <span className="cardPrice">$5.00</span>
-               </div>
-			 <p className="cardDescription">This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-             <div className="button-logo">
-             <a href="#" className="card-button">Order a delivery</a>
-             <img src={deliveryLogo} alt="delivery logo"/>
-             </div>
-		    </div>
-	    </div>
-      </div>
+          </div>
+           ))}
+        </div>
+        </div>
         </>
-    )
-}
+    );
+};
 
 export default Specials;

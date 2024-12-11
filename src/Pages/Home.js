@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import '../App.css';
-import ReserveATable from "../Components/ReserveATable";
+import ReserveATable from "../Components/ReserveSection";
 import Specials from "../Components/Specials";
 import Testimonials from "../Components/Testimonials";
 import AboutUs from "../Components/AboutUs"

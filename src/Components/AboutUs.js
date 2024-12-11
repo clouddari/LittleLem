@@ -1,3 +1,4 @@
+import "./AboutUs.css";
 import chef2 from "../Assets/Mario and Adrian A.jpg"
 import chef1 from "../Assets/Mario and Adrian b.jpg"
 

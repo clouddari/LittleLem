@@ -1,4 +1,5 @@
 import reservepic from "../Assets/restauranfood.jpg"
+import "./ReserveSection.css"
 
 function ReserveATable () {
     return(
