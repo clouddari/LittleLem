@@ -9,7 +9,7 @@ function Specials (){
          <div className="specials">
         <div className="logobutton">
             <h1>Specials</h1>
-            <button>Online Menu</button>
+            <a href="/Menu">Online Menu</a>
         </div>
 
         <div className="product-section">

@@ -5,14 +5,39 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-button {
+  border: none; /* Removes the default border */
+  box-shadow: none; /* Removes the box-shadow */
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #f1ca4c;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.scroll-button.hidden {
+  transform: translateY(100px); /* Moves the button off-screen */
+  opacity: 0;
+}
+
+
 /* header */
 .logo {
   max-height: 4rem;
   pointer-events: none;
-  margin-right: 80px;
+  margin-right: 60px;
 }
+
 .header {
-  background-color: #d5d5d5;
   min-height: 6vh;
   display: flex;
   align-items: center;
@@ -23,26 +48,26 @@ html {
 .navMenu a {
   text-decoration: none; /* Removes underline */
   color: inherit;
-  padding: 15px 30px;
+  padding: 15px 25px;
+  border-radius: 10px;
   margin: 2px;
   color: #3b3737;
+  transition: all 0.3s;
 }
 .navMenu a:hover {
-  color: #282c34;
   background-color:#f1ca4c;
-  border-radius: 15px;
   color: black;
-  font-weight: 600;
 }
 .navMenu ul {
   display: flex;
   padding: 0;
+  padding-left: 10px;
 }
 .navMenu{
     font-family: 'Karla', sans-serif;
     font-weight: 500;
     list-style-type: none;
-    margin: 0;
+    margin-left: 30px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -51,7 +76,7 @@ html {
 .navMenu li, Link {
   display: inline;
   padding: 8px 0px;
-  margin: 0 1px;
+  margin: 0 5px;
 }
 /* Reserve a Table Section */
 .reserveSection {
@@ -112,10 +137,11 @@ html {
   font-size: 1.2rem;
   cursor: pointer;
   padding: 15px 25px;
+  transition: all 0.3s;
 }
 .col-1 a:hover{
-  background-color: #ee9972;
-  color:#333333;
+  background-color: #000;
+  color:#fff;
 }
 .col-2 {
   flex: 1;
@@ -146,7 +172,11 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-.logobutton button{
+.logobutton a{
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;
+  text-decoration: none;
   font-family: 'Karla', sans-serif;
   font-weight: bolder;
   background-color: #f1ca4c;
@@ -157,12 +187,12 @@ html {
   border-style: none;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-
+  transition: all 0.3s;
 }
-.logobutton button:hover{
-  background-color: #ee9972;
-  color:#333333;
+
+.logobutton a:hover{
+  background-color: #000;
+  color:#ffffff;
 }
 .logobutton h1{
   font-family: 'Markazi Text', serif;
@@ -206,7 +236,7 @@ html {
 }
 .cardPrice {
   font-size: 1.2rem;
-  color: #2e6757;
+  color: #ee9972;
   font-family: 'Karla', sans-serif;
   font-weight: bolder;
 }
@@ -236,8 +266,8 @@ html {
   cursor: pointer;
 }
 .button-logo:hover {
-  background-color: #ee9972;
-  color: #333333;
+  background-color: #F4CE14;
+  color: #000;
   border-radius: 5px;
 }
 .button-logo{
@@ -247,6 +277,7 @@ html {
   width: 80%;
   padding: 10px 20px;
   margin-bottom: 20px;
+  transition: all 0.3s;
 }
 
 /* Testiomonials Section */
@@ -310,7 +341,7 @@ margin: 5px 0;
 
 /* About us Section */
 .AboutUsMain{
-  background-color: #fbdabb;
+
   display: flex;
   flex-direction: row;
   justify-content:center;
@@ -556,7 +587,7 @@ gap: 40px;
     flex: 1 1 calc(50% - 40px); /* Two columns, accounting for the gap */
 }
 .form-button:hover {
-  background-color:#ee9972;
+  background-color:#333;
 }
 select {
   font-size: 1rem;

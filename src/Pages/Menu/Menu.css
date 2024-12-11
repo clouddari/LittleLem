@@ -1,18 +1,102 @@
+.menu-title{
+  font-family: 'Markazi Text', serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #495E57;
+}
+
+.filter-buttons  {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 300px;
+}
 .filter-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-weight: bolder;
+  background-color: #F4CE14;
+  color: #000000;
+  border-radius: 0.5em;
+  width: 200px;
+  height:70px;
+  border-style: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
   }
+
+  .filter-buttons button:hover {
+    background-color: #333;
+    color:#fff;
+    }
   
   .menu-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin: 20px 240px 80px 240px;
   }
   
   .menu-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
+    background-color: #EDEFEE;
+    border-radius: 15px;
+    position: relative;
+    width: 265px;
+    height:auto;
+    overflow: hidden;
+    align-items: center;
   }
-  
+
+  .menu-item-price h2{
+  font-family: 'Markazi Text', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  }
+  .menu-item h2:last-child {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #EE9972;
+    }
+
+  .menu-item-image{
+    width: 100%; /* Full width of the card */
+    border-radius: 15px 15px 0 0; /* Rounded corners on top */
+    height: 185px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover; /* Crops the image to fill the container */
+    object-position: center; /* Adjust the focus point (center by default) */
+  }
+
+.menu-item-description {
+    display: none;
+    position: absolute;
+  }
+
+  .menu-item:hover .menu-item-description {
+    display:block;
+    position: absolute;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    top: 62%;
+    left: 0;
+    background-color: #FECCCC;
+    color: #495E57;
+    height:max-content;
+    padding: 10px;
+    z-index: 10;
+    transition: all 0.9s;
+  }
+
+  .menu-item-price{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 25px;
+  }

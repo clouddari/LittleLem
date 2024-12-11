@@ -28,10 +28,9 @@ const Login = () => {
   return (
     <>
     <div className="logIn-page">
-        <div className="GoBack-button">
-        <a href="/#" onClick={backHandler}> <FontAwesomeIcon icon={faArrowLeft}/> Go Back</a>
-        </div>
-        
+
+    <button className="GoBack-button" onClick={backHandler}> <FontAwesomeIcon icon={faArrowLeft}/></button>
+
     <div className="login-container">
       <form onSubmit={handleSubmit}>
         <h2>Log in</h2>

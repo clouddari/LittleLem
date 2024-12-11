@@ -6,6 +6,7 @@ import ReserveATable from "../Components/ReserveATable";
 import Specials from "../Components/Specials";
 import Testimonials from "../Components/Testimonials";
 import AboutUs from "../Components/AboutUs"
+import ScrollButton from "../Components/ScrollButton";
 
 function Home (){
     return(
@@ -16,6 +17,7 @@ function Home (){
         <Testimonials />
         <AboutUs />
         <Footer />
+        <ScrollButton />
         </>
     );
 };
