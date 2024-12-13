@@ -1,4 +1,4 @@
-import reservepic from "../Assets/restauranfood.jpg"
+import reservepic from "../Assets/restauranfood.webp"
 import "./ReserveSection.css"
 
 function ReserveATable () {

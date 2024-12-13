@@ -1,6 +1,6 @@
 import "./AboutUs.css";
-import chef2 from "../Assets/Mario and Adrian A.jpg"
-import chef1 from "../Assets/Mario and Adrian b.jpg"
+import chef2 from "../Assets/chef1.webp"
+import chef1 from "../Assets/chef2.webp"
 
 function AboutUs (){
 

@@ -19,7 +19,7 @@ const ScrollButton = () => {
       className={`scroll-button ${!isVisible ? "hidden" : ""}`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      <FontAwesomeIcon icon={faArrowUp} />
+      <FontAwesomeIcon icon={faArrowUp} /> go up
     </button>
   );
 };
