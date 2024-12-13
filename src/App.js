@@ -2,9 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import React from 'react';
 import Home from "./Pages/Home";
-import Booking from "./Pages/BookingPage";
+import Booking from "./Pages/Reserve a table/BookingPage";
 import NoPage from './Pages/NoPage';
-import BookingConfirmation from './Pages/BookingConfirmation';
+import BookingConfirmation from './Pages/Reserve a table/BookingConfirmation';
 import Login from './Pages/Login/Login';
 import Menu from './Pages/Menu/Menu';
 

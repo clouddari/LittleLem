@@ -1,7 +1,7 @@
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import logoS from "../Assets/logo-single.png";
-import "../App.css";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
+import logoS from "../../Assets/logo-single.png";
+import "./ReservationConfirmation.css";
 import { useLocation } from 'react-router';
 
  const BookingConfirmation = () => {

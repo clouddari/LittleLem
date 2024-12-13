@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "../App.css";
-import { fetchAPI, submitAPI } from './api';
+import "./ReservationConfirmation.css";
+import { fetchAPI, submitAPI } from '../../Components/api';
 import { useNavigate } from 'react-router';
 
 

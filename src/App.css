@@ -128,193 +128,53 @@ padding: 4px;
 	background-color: #000000;
 }
 
-/* Booking Form */
-form {
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px 50px;
-  background-color: #FECCCC;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 810px;
+.page-nopage{
+  background-color: #f1ca4c;
+  height: 100vh;
 }
-label {
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-  display: block;
-}
-input, select:required {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: none;
-  border-radius: 15px;
-  font-size: 14px;
-}
-.input-name{
-  width:98%;
-}
-
-input:required:valid, select:valid {
-  border: 2px solid green; /* Green for valid input */
-}
-input.invalid, select.invalid {
-  border: 2px solid red; /* Red for invalid input */
-}
-.error{
-  padding: 0 5px;
-  color: red;
-  font-size: 12px;
-}
-.form h2{
-  font-family: 'Markazi Text', serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: #2e6757;
-  text-align: center;
-  padding: 0;
-  margin: 10px 10px;
-}
-.form-button {
-  padding: 12px 20px;
-  background-color:#F4CE14;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 15px;
-  font-size: 18px;
-  width: 100%;
-  cursor: pointer;
-  font-family: 'Karla', sans-serif;
-  font-weight: 900;
-  display: block;
-  margin: 15px auto;
-  transition: background-color 0.3s, color 0.3s;
-}
-button:disabled {
-  background-color: #ccc; /* Grey */
-  color: #888; /* Lighter text */
-  cursor: not-allowed;
-}
-button:disabled:hover {
-  background-color: #ccc; /* Grey */
-  color: #888; /* Lighter text */
-  cursor: not-allowed;
-}
-.phone-email{
-  margin: 10px 5px;
-  display: flex;
-  gap: 25px;
-  justify-content: space-around;
-}
-.phone-email input{
- width: 270px;
-}
-.phone-form, .email-form{
-  padding:0;
-}
-.booking-details-form{
-display: flex;
-flex-wrap: wrap;
-gap: 40px;
-}
-.booking-details-form div {
-    flex: 1 1 calc(50% - 40px); /* Two columns, accounting for the gap */
-}
-.form-button:hover {
-  background-color:#333;
-}
-select {
-  font-size: 1rem;
-}
-form label{
-  padding-left: 5px;
-  font-weight: 500;
-}
-
-/* Booking Confirmation */
-.b-confirmation{
-  background-color: #495E57;
-  color: white;
-  border-radius: 1rem;
-  text-align: center;
-  margin: 50px 250px;
-  padding: 50px 10px;
-}
-
-.confirmation-title{
-  font-family:'Markazi Text', serif;
-  font-weight: 900;
-  font-size: 3.5rem;
-}
-.confirmation-text h3{
-  font-family: 'Karla', sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  width: 520px;
-  margin: auto;
-}
-.confirmation-text h2{
-  padding:20px 10px;
-  font-family: 'Karla', sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  margin: auto;
-}
-.booking-confirmation-details{
-  background-color: #EDEFEE;
-  margin: 20px 70px;
-  padding: 20px 10px;
-  border-radius: 1rem;
-  color: black;
-}
-
-.booking-confirmation-details h1{
-  font-family:'Markazi Text', serif;
-  font-weight: 900;
-  font-size: 3.5rem;
-  text-align: left;
-  margin: 0 50px;
-}
-
-.booking-confirmation-details h3{
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  text-align: left;
-  color:#626262;
-  margin: 15px 0;
-}
-.booking-confirmation-details p{
-  font-family:'Markazi Text', serif;
-   font-weight: 600;
-  font-size: 1.7rem;
-  text-align: left;
-  margin: 5px 0;
-}
-
-.booking-conf-columns{
-  display: flex;
-  text-align: left;
-  justify-content:left;
-  margin: 0px 52px;
-  gap: 150px;
-}
-
-
 .noPage{
+  display: flex;
+  justify-content: center;
   font-family: markazi;
   font-weight: 600;
   font-size: 5rem;
-  margin: 100px 300px;
+  margin-top: 100px;
 }
+
+
+@media screen and (max-width: 1024px){
+  .noPage{
+    font-size: 4rem;
+    margin-top: 200px;
+  }
+}
+
 
 @media only screen and (max-width: 768px){
 
-
+  .noPage{
+    font-size: 3rem;
+    margin-top: 220px;
+  }
+  
   .footer {
     flex-direction: column;
+    padding: 5px 5px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .noPage{
+    font-size: 2.5rem;
+    margin-top: 220px;
+    text-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 430px){
+  .noPage{
+    font-size: 2rem;
+    margin-top: 220px;
+    text-wrap: wrap;
   }
 }

@@ -109,3 +109,54 @@
  .forgot-signup a{
     padding: 5px;
  }
+
+
+
+@media screen and (max-width: 1024px){
+  .logIn-page{
+    max-height: 1366px;
+}
+
+.login-container form {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+.login-container{
+  padding-top: 250px;
+}
+
+}
+
+@media screen and (max-width: 768px){
+  .login-container{
+    padding-top: 210px;
+  }
+
+  .login-container form{
+    margin: 0;
+    width: auto;
+  }
+
+  .login-container h2{
+    font-size: 2rem;
+  }
+  .login-container input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    padding: 5px;
+  }
+
+  .login-container button{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .login-container{
+    padding-top: 130px;
+  }
+}
