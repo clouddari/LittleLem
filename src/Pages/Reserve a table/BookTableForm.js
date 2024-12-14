@@ -122,7 +122,7 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
       {validation.phone === false && <small className="error">Phone is required. Format: 1234567890</small>}
       </div>
        <div className="email-form">
-      <labe htmlFor="email">Email:</labe>
+      <label htmlFor="email">Email:</label>
       <input
        id="email"
        type="email"

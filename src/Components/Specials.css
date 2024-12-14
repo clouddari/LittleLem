@@ -78,9 +78,10 @@
 .logobutton{
     display:flex;
     margin-top: 60px;
-    width: 80%;
+    width: 100%;
     margin-bottom: 10px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40%;
     align-items: center;
   }
   .logobutton a{
@@ -111,18 +112,27 @@
     color: #000000;
     font-size: 4.5rem;
    justify-content: center;
-   margin-left: 300px;
   }
+
+  @media screen and (min-width: 1440px){
+   .logobutton {
+   display: flex;
+   justify-content: center;
+   gap: 45%;
+   margin: 70px auto;
+   width: 50%;
+  }
+  .logobutton h1{
+    margin: 0;
+  }
+}
 
   @media screen and (max-width: 1024px){
     .logobutton{
         display: flex;
-        justify-content: space-between;
-        margin: 80px 60px 40px 60px;
+        justify-content: center;
     }
-    .logobutton h1{
-        margin:0 40px;
-    }
+
 
     .logobutton a{
         margin-right: -50px;

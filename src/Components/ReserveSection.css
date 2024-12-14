@@ -85,6 +85,28 @@
       border-radius: 5%;
   }
 
+
+@media screen and (min-width: 1440px) {
+.reserveSection{
+  margin: 0 auto;
+  gap: 5%;
+}
+.col-1{
+  margin-left: 25%;
+  margin-right: 0px;
+}
+.col-2{
+  flex: 1;
+  max-width: 50%;
+  margin-left:0;
+  margin-right: 25%;
+  justify-content: flex-end;
+}
+}
+
+
+
+
   @media screen and (max-width: 1024px) {
     .reserveSection {
         display: flex;

@@ -22,7 +22,7 @@ function Header(){
                 <li aria-label="Button-Link to the About Us Section"><Link to="/#about-us">About</Link></li>
                 <li aria-label="Button-Link to the Menu Page"><Link to="/Menu">Menu</Link></li>
                 <li aria-label="Button-Link to the Booking a Table Page"><Link to="/booking">Reservations</Link></li>
-                <l aria-label="Button-Link to the Log In Page"i><Link to="/LogIn">Login</Link></l>
+                <li aria-label="Button-Link to the Log In Page"><Link to="/LogIn">Login</Link></li>
             </ul>
             </nav>
         </header>
