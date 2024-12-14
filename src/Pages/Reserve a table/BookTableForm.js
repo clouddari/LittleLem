@@ -96,8 +96,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
     <form className='form' onSubmit={handleSubmit}>
       <h2>Personal information</h2>
       <div className='input-name'>
-      <label>Name:</label>
+      <label htmlFor="name">Name:</label>
       <input
+       id="name"
        type="text"
        name="name"
        value={formData.name}
@@ -108,8 +109,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
        {validation.name === false && <small className="error">Name is required</small>}
        <div className='phone-email'>
         <div className='phone-form'>
-      <label>Phone Number:</label>
+      <label htmlFor="phone">Phone Number:</label>
       <input
+      id="phone"
       type="tel"
       name="phone"
       value={formData.phone}
@@ -120,8 +122,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
       {validation.phone === false && <small className="error">Phone is required. Format: 1234567890</small>}
       </div>
        <div className="email-form">
-      <label>Email:</label>
+      <labe htmlFor="email">Email:</labe>
       <input
+       id="email"
        type="email"
        name="email"
        value={formData.email}
@@ -135,8 +138,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
   <h2>Booking Details</h2>
   <div className='booking-details-form'>
   <div className='date-form'>
-      <label>Date:</label>
+      <label htmlFor="date">Date:</label>
       <input
+    id="date"
     type="date"
     name="date"
     value={formData.date}
@@ -167,8 +171,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
 
       <div className='guests-form'>
       <label>Number of Guests:</label>
-      <input
+      <input htmlFor="guests"
       className={validation.guests === false ? "invalid" : "valid"}
+      id='guests'
       type="number"
        name="guests"
        value={formData.guests}
@@ -178,8 +183,9 @@ const isFormValid = Object.values(validation).every(isValid => isValid) &&
        </div>
 
        <div className='occasion-form'>
-      <label>Occasion:</label>
+      <label htmlFor="occasion">Occasion:</label>
       <select
+      id="occasion"
       name="occasion"
       value={formData.occasion}
       onChange={handleChange}

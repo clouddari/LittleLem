@@ -18,11 +18,11 @@ function Header(){
             <button class="menu-toggle" onClick={toggleMenu}>☰</button>
 
             <ul className={menuOpen ? "open": ""}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/#about-us">About</Link></li>
-                <li><Link to="/Menu">Menu</Link></li>
-                <li><Link to="/booking">Reservations</Link></li>
-                <li><Link to="/LogIn">Login</Link></li>
+                <li aria-label="Button-Link to the Home Page"><Link to="/">Home</Link></li>
+                <li aria-label="Button-Link to the About Us Section"><Link to="/#about-us">About</Link></li>
+                <li aria-label="Button-Link to the Menu Page"><Link to="/Menu">Menu</Link></li>
+                <li aria-label="Button-Link to the Booking a Table Page"><Link to="/booking">Reservations</Link></li>
+                <l aria-label="Button-Link to the Log In Page"i><Link to="/LogIn">Login</Link></l>
             </ul>
             </nav>
         </header>

@@ -34,16 +34,18 @@ const Login = () => {
     <div className="login-container">
       <form onSubmit={handleSubmit}>
         <h2>Log in</h2>
-        <label>Username</label>
+        <label htmlFor="username">Username</label>
         <input
+          id="username"
           type="text"
           name="username"
           value={formData.username}
           onChange={handleChange}
           required
         />
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <input
+          id="password"
           type="password"
           name="password"
           value={formData.password}

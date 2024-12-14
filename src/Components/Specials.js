@@ -48,7 +48,7 @@ function Specials (){
 
          <p className="cardDescription">{card.description}</p>
              <div className="button-logo">
-             <a href="#" className="card-button">Order a delivery</a>
+             <a aria-label="Button-Link to order delivery" href="#" className="card-button">Order a delivery</a>
              <img src={deliveryLogo} alt="delivery logo"/>
              </div>
           </div>
