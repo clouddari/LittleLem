@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LittleLem/static/css/main.f3c2b96c.css",
-    "main.js": "/LittleLem/static/js/main.51bf84ee.js",
+    "main.js": "/LittleLem/static/js/main.f3040095.js",
     "static/media/chef2.webp": "/LittleLem/static/media/chef2.f04b454cfd7c815ea76c.webp",
     "static/media/chef1.webp": "/LittleLem/static/media/chef1.591ba4117025aae61dc4.webp",
     "static/media/testimonial1.png": "/LittleLem/static/media/testimonial1.e972eef3dc9272c62f5f.png",
@@ -16,16 +16,16 @@
     "static/media/tiramisu4.jpg": "/LittleLem/static/media/tiramisu4.c001c6048d2378b4cecc.jpg",
     "static/media/margarita2.jpg": "/LittleLem/static/media/margarita2.c49e0b95af884444de03.jpg",
     "static/media/baklava8.jpg": "/LittleLem/static/media/baklava8.ddbf39c7823a048890b0.jpg",
-    "static/media/Logo.svg": "/LittleLem/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/Logo.svg": "/LittleLem/static/media/Logo.2c379c7ea7eb07402bfc7700915316de.svg",
     "static/media/lemonade3.jpg": "/LittleLem/static/media/lemonade3.1b9be5d70c62d78f9c9a.jpg",
     "static/media/mojito7.jpg": "/LittleLem/static/media/mojito7.e79926996db8695244cf.jpg",
-    "static/media/Delivery Logo.svg": "/LittleLem/static/media/Delivery Logo.28444ac1dba1a66eda30928a626ebd9e.svg",
+    "static/media/Delivery Logo.svg": "/LittleLem/static/media/Delivery Logo.4b5b51fedf50e0e3d495b18df7102702.svg",
     "index.html": "/LittleLem/index.html",
     "main.f3c2b96c.css.map": "/LittleLem/static/css/main.f3c2b96c.css.map",
-    "main.51bf84ee.js.map": "/LittleLem/static/js/main.51bf84ee.js.map"
+    "main.f3040095.js.map": "/LittleLem/static/js/main.f3040095.js.map"
   },
   "entrypoints": [
     "static/css/main.f3c2b96c.css",
-    "static/js/main.51bf84ee.js"
+    "static/js/main.f3040095.js"
   ]
 }
