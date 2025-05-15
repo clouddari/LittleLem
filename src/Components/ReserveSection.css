@@ -1,0 +1,225 @@
+/* Reserve a Table Section */
+.reserveSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a4742;
+    padding: 0px;
+    position: relative;
+    overflow: visible; /* Allow the image to stick out */
+  }
+  .col-1 {
+    margin-left: 300px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    flex: 1;
+    height: 300px;
+    width: 330px;
+  }
+  .col-1 h1 {
+    font-family: 'Markazi Text', serif;
+    font-weight: 500;
+    color: #F4CE14;
+    font-size: 4.2rem;
+    height: 52px;
+    width: 320px;
+    margin-bottom: 20px;
+  }
+  .col-1 h2 {
+    line-height: 0;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    font-family: 'Markazi Text', serif;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 2.3rem;
+  }
+  .col-1 h3 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    padding-bottom: 40px;;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    height: 82px;
+    width: 243px;
+    max-width: 500px; /* Limits width for better responsiveness */
+  }
+  .col-1 a {
+    font-family: 'Karla', sans-serif;
+    font-weight: bolder;
+    text-decoration: none; /* Removes underline */
+    background-color: #f1ca4c;
+    color: #000000;
+    border-radius: 0.5em;
+    border-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 15px 25px;
+    transition: all 0.3s;
+  }
+  .col-1 a:hover{
+    background-color: #000;
+    color:#fff;
+  }
+  .col-2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-right: 180px;
+    width: 376px; /* Fixed width */
+    height: 427px; /* Fixed height */
+    position: relative;
+    overflow: visible;
+  }
+  .col-2 img {
+    margin-top: 40px;
+    margin-right: auto;
+    width: 376px;
+    height: 427px;
+    margin-bottom: -50px; /* Extend the image below the section */
+    position: relative;
+    object-fit: cover;
+      border-radius: 5%;
+  }
+
+
+@media screen and (min-width: 1440px) {
+.reserveSection{
+  margin: 0 auto;
+  gap: 5%;
+}
+.col-1{
+  margin-left: 25%;
+  margin-right: 0px;
+}
+.col-2{
+  flex: 1;
+  max-width: 50%;
+  margin-left:0;
+  margin-right: 25%;
+  justify-content: flex-end;
+}
+}
+
+
+
+
+  @media screen and (max-width: 1024px) {
+    .reserveSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #3a4742;
+        padding: 0px;
+        position: relative;
+        overflow: visible; /* Allow the image to stick out */
+      }
+      .col-1 {
+        margin-left: 100px;
+        flex: 1;
+      }
+
+      .col-2 {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin-right: auto;
+        width: 376px; /* Fixed width */
+        height: 427px; /* Fixed height */
+        position: relative;
+        overflow: visible;
+      }
+      .col-2 img {
+        margin-top: 40px;
+        margin-right: auto;
+        width: 750;
+        height: auto;
+        
+        margin-bottom: -50px; /* Extend the image below the section */
+        position: relative;
+        object-fit: cover;
+          border-radius: 5%;
+      }
+
+  }
+
+  @media screen and (max-width: 900px) {
+    .reserveSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .col-1 {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .col-1 a{
+        margin: auto;
+       width: 80%;
+    }
+
+    .col-1 h1{
+        font-size: 2.5rem;
+        margin: auto;
+    }
+
+    .col-1 h2{
+        font-size: 2rem;
+    }
+    .col-1 h3 {
+        text-align: center;
+        width: auto;
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin: auto;
+    }
+
+    .col-2 {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-2 img {
+        width: 85%;
+        max-height: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .col-2 img{
+         max-height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+   .col-1 h1{
+    font-size: 2rem;
+   }
+
+   .col-1 h2{
+    font-size: 1.5rem;
+    padding-top: 0;
+   }
+
+   .col-1 h3{
+    font-size: 1.2rem;
+    width: 85%;
+    padding-bottom: 20px;
+   }
+
+}

@@ -1,0 +1,162 @@
+.logIn-page{
+    background-color: #495E57;
+    height: 100vh;
+}
+.logIn-page .GoBack-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: #f1ca4c;
+    color: #333;
+    font-size: 2rem;
+    top: 40px;
+    left: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .GoBack-button:hover {
+    background-color: #333;
+    color: #f1ca4c;
+  }
+
+
+
+.logIn-page h2{
+   font-family: 'Markazi Text', serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+.logIn-page label{
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+    margin-top: auto;
+    color: #333333;
+    font-size: 1.3rem;
+ }
+
+.logIn-page button{
+    font-family: 'Karla', sans-serif;
+    font-weight: bolder;
+    background-color: #f1ca4c;
+    color: #000000;
+    border-radius: 0.5em;
+    width: 200px;
+    height:70px;
+    border-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  .login-container form {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    font-weight: 900;
+    color:#495E57;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .login-container input {
+    width: 94%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-bottom: 10px;
+  }
+  .login-container button{
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 18px;
+    width: 100%;
+    height: 50px;
+
+  }
+
+ button:hover {
+    background-color: #333333;;
+    color:#fff130;;
+  }
+  
+ .forgot-signup{
+    display: flex;
+    flex-direction: column;
+ }
+ .forgot-signup a{
+    padding: 5px;
+ }
+
+
+
+@media screen and (max-width: 1024px){
+  .logIn-page{
+    max-height: 1366px;
+}
+
+.login-container form {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+.login-container{
+  padding-top: 250px;
+}
+
+}
+
+@media screen and (max-width: 768px){
+  .login-container{
+    padding-top: 210px;
+  }
+
+  .login-container form{
+    margin: 0;
+    width: auto;
+  }
+
+  .login-container h2{
+    font-size: 2rem;
+  }
+  .login-container input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    padding: 5px;
+  }
+
+  .login-container button{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .login-container{
+    padding-top: 130px;
+  }
+}

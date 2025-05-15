@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+html {
+  scroll-behavior: smooth;
+}
+.App{
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-button {
+  border: none; /* Removes the default border */
+  box-shadow: none; /* Removes the box-shadow */
+  position: fixed;
+  bottom: 50px; /* Distance from the bottom */
+  right: 50px; /* Distance from the right */
+  background-color: #f1ca4c;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.scroll-button.hidden {
+  transform: translateY(100px); /* Moves the button off-screen */
+  opacity: 0;
+}
+
+
+
+/* Footer */
+.footer {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  background-color: #495E57;
+  width: 100%; /* Ensure it takes full width */
+  padding: 0 15px; /* Padding inside the container */
+}
+.footer ul{
+	list-style: none;
+}
+.row{
+  display: flex;
+  justify-content: center;
+	padding-bottom: 20px;
+  padding-top: 20px;
+	width: 100%;
+}
+.footer-col{
+	width: 25%;
+	padding: 0 15px;
+}
+.footer-col {
+  width: 25%; /* Default width for all columns */
+}
+.footer-col:last-child {
+  width: 15%; /* Reduce width for the "Follow Us" column */
+}
+.footer-col h4 {
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+  color: #f4e928; /* Text color */
+  transition: background-color 0.3s, color 0.3s;
+}
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black; /* Underline color */
+  height: 2px;
+  width: 50px; /* Width of the underline */
+}
+.footer-col ul {
+    padding: 0; /* Remove default padding */
+}
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+}
+.footer-col ul li a{
+  color:white;
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+color: #fff130;
+padding: 4px;
+}
+.footer-col .social-links {
+	list-style:none;
+}
+.footer-col .social-links ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Aligns icons in the center */
+  list-style: none;
+}
+.footer-col .social-links a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color:#f6f62a;
+	background-color: #000000;
+}
+
+.page-nopage{
+  background-color: #f1ca4c;
+  height: 100vh;
+}
+.noPage{
+  display: flex;
+  justify-content: center;
+  font-family: markazi;
+  font-weight: 600;
+  font-size: 5rem;
+  margin-top: 100px;
+}
+
+
+@media screen and (max-width: 1024px){
+  .noPage{
+    font-size: 4rem;
+    margin-top: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+
+  .noPage{
+    font-size: 3rem;
+    margin-top: 220px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    padding: 5px 5px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .noPage{
+    font-size: 2.5rem;
+    margin-top: 220px;
+    text-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 430px){
+  .noPage{
+    font-size: 2rem;
+    margin-top: 220px;
+    text-wrap: wrap;
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Little Lemon",
+    "short_name": "Little Lemon",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "Mediterranean Fresh Food",
+    "icons": [
+      {
+        "src": "logo-s.png",
+        "type": "image/png"
+      }
+    ]
+  }
